@@ -1,0 +1,11 @@
+        #notificationModal .modal-content {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 8px;
+        }
+
+        #notificationModal .modal-close {
+            color: #fff;
+            float: right;
+            font-size: 22px;
+            cursor: pointer;
+        }

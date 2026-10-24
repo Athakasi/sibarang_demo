@@ -1,0 +1,192 @@
+.sidebar {
+    width: 250px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 0;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    overflow-y: hidden;
+    box-shadow: 2px 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-header {
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+}
+
+.sidebar-title {
+    font-size: 24px;
+    font-weight: 700;
+    margin: 0;
+}
+
+.sidebar-subtitle {
+    font-size: 12px;
+    opacity: 0.8;
+    margin: 5px 0 0 0;
+}
+
+.sidebar-nav {
+    flex: 1;
+    padding: 20px 0;
+    overflow-y: hidden;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-left: 4px solid transparent;
+}
+
+.nav-item:hover {
+    background: rgba(255, 255, 255, 0.1);
+    color: white;
+    padding-left: 4rem;
+}
+
+.nav-item.active {
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border-left-color: white;
+    padding-left: 3rem;
+    /* bisa gunakan ease-out */
+    animation: navItemActive 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) both;
+    will-change: transform, padding-left, background, border-left-color;
+}
+
+.nav-icon {
+    margin-right: 15px;
+    font-size: 18px;
+}
+
+.nav-text {
+    flex: 1;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: auto;
+    font-size: small;
+}
+
+.sidebar-footer {
+    padding: 20px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.user-name {
+    margin: 0;
+    font-weight: 600;
+}
+
+.user-info small {
+    opacity: 0.8;
+}
+
+.btn-logout {
+    width: 100%;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-logout:hover {
+    background: rgba(255, 0, 0, 0.3);
+    border-color: rgba(255, 0, 0, 0.5);
+    color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .sidebar {
+        width: 200px;
+    }
+}
+
+/* Animation for active nav item */
+@keyframes navItemActive {
+    from {
+        padding-left: 15px; /* bisa gunakan 5rem */
+        background: rgba(255, 255, 255, 0);
+        border-left-color: transparent;
+        transform: translateX(-6px);
+    }
+    to {
+        padding-left: 3rem;
+        background: rgba(255,255,255,0.2);
+        border-left-color: white;
+        transform: translateX(0);
+    }
+}
+
+/* Submenu styles */
+.has-submenu {
+    cursor: pointer;
+}
+
+.has-submenu .submenu-arrow {
+    font-size: 10px;
+    transition: transform 0.3s ease;
+}
+
+.has-submenu.active .submenu-arrow {
+    transform: rotate(180deg);
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.submenu.show {
+    max-height: 200px;
+}
+
+.submenu .nav-item {
+    padding: 12px 20px 12px 50px;
+    font-size: 12px;
+    border-left: 4px solid transparent;
+}
+
+.submenu .nav-item:hover {
+    padding-left: 60px;
+}
+
+.submenu .nav-item.active {
+    padding-left: 55px;
+}
