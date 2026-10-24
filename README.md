@@ -12,6 +12,16 @@ Aplikasi ini dibangun menggunakan arsitektur **Clean Native PHP** yang ringan, a
 
 ---
 
+
+## 🌐 Live Demo
+
+**Try SI-BARANG online:** [Open Demo Website](https://faldesk.freedev.app/projects/sibarang/login.php)
+
+Explore the inventory management system, including item management, incoming and outgoing stock transactions, and inventory reports.
+
+> This is a portfolio demo. Please use the demo account or Quick Login feature provided on the login page.
+
+
 ## 🌟 Fitur Unggulan
 
 - 📊 **Dashboard Ringkasan Metrik**: Statistik total master barang, volume barang masuk bulan ini, dan barang keluar bulan ini secara real-time.
